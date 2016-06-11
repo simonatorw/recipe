@@ -1,0 +1,665 @@
+body {
+	font-family: 'Slabo 27px', serif;
+	font-size: 16px;
+	background-color: #fff;
+	margin: 0;
+	
+	.link, .link:visited {
+		color: blue;
+		text-decoration: none;
+	}
+	.formContainer {
+		margin-bottom: 20px;
+	}
+	.formSelect, .formText, .formTextarea {
+		padding: 3px 6px;
+		border: 1px solid #aaa;
+	}
+	.formTextarea {
+		height: 80px;
+	}
+	.formLabel {
+		color: #aaa;
+		margin-right: 3px;
+	}
+	
+	.container {
+		margin: 0 auto;
+		
+		.logo {
+			background: url(../images/food-sense.png) no-repeat;
+			width: 120px;
+			height: 120px;
+			cursor: pointer;
+		}
+		.navItem {
+			.navIcon {
+				background: url(../images/navicons.png) no-repeat;
+				width: 30px;
+				vertical-align: middle;
+			}
+			.navText, navText:visited {
+				color: #379692;
+				font-size: 1.1em;
+				font-weight: bold;
+				font-style: italic;
+				text-decoration: none;
+			}
+			#tastemakers {
+				height: 26px;
+			}
+			#blog {
+				height: 31px;
+				background-position: 0 -45px;
+			}
+			#thealist {
+				height: 31px;
+				background-position: 0 -92px;
+			}
+			#contribute {
+				height: 28px;
+				background-position: 0 -141px;
+			}
+			#about {
+				height: 31px;
+				background-position: 0 -186px;
+			}
+		}
+		.mainContent {
+			.splash {
+				background: url(../images/0140_foodsense.jpg) no-repeat;
+				height: 445px;
+				
+				.splashText {
+					float: right;
+					
+					h1 {
+						margin: 0;
+						padding: 10px 30px;
+						float: right;
+						font-size: 1.5em;
+						font-style: italic;
+					}
+					h2 {
+						margin: 0;
+						background-color: #000;
+						color: #fff;
+						padding: 10px 30px;
+						font-size: 1.07em;
+						font-style: italic;
+						clear: right;
+					}
+					.photographer {
+						float: right;
+						font-size: .7em;
+						border-radius: 3px;
+						color: #333;
+					}
+				}
+			}
+			.splashMenu {
+				width: 896px;
+				overflow: hidden;
+				
+				.splashNavItem {
+					width: 25%;
+					float: left;
+					background-color: #edf9f9;
+					border-right: solid 1px #dbe9e9;
+					border-left: solid 1px #fff;
+					box-sizing: border-box;
+					color: #40aa96;
+					padding: 20px 0 0 20px;
+					cursor: pointer;
+					
+					&.selected {
+						background-color: #d3f2ed;
+					}
+					
+					.splashNavTitle {
+						font-weight: bold;
+						font-size: 1.2em;
+					}
+					.splashNavDescription {
+						font-style: italic;
+						font-size: .8em;
+					}
+				}
+			}
+			.mail {
+				margin: 25px 0;
+				border-top: 1px dashed #e6e4e7;
+				border-bottom: 1px dashed #e6e4e7;
+				padding: 10px 0;
+				
+				&:before {
+					content: url(../images/icon-mailinglist-32.png);
+					top: 10px;
+					position: relative;
+					margin-left: 10px;
+				}
+				.instr {
+					display: inline-block;
+					font-style: italic;
+					font-size: .8em;
+					margin: 0 10px;
+					vertical-align: middle;
+				}
+				.signupTextbox {
+					padding: 3px;
+					margin-right: 10px;
+				}
+			}
+			.recipes {
+				overflow: hidden;
+				
+				.recipe {
+					margin: 0 20px 20px 0;
+					float: left;
+					
+					.recipeImg {
+						width: 100%;
+						border: 1px solid #e5e5e5;
+						padding: 5px;
+						box-sizing: border-box;
+					}
+					h3 {
+						margin: 10px 0;
+						color: #40aa96;
+						font-size: 1.1em;
+					}
+					.recipeDescription {
+						margin-bottom: 10px;
+					}
+					.date {
+						color: #a5a5a5;
+					}
+					.more, .more:visited {
+						color: #40aa96;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.mainFooter {
+			margin-top: 50px;
+			border-top: 2px solid #e7e7e7;
+			padding: 20px 0;
+			overflow: hidden;
+			
+			.social {
+				float: right;
+				
+				.icon {
+					width: 30px;
+					height: 30px;
+					display: inline-block;
+					zoom: 1;
+					margin-right: 6px;
+					vertical-align: middle;
+					filter: invert(80%);
+					-webkit-filter: invert(80%);
+					
+					&.tweet {
+						background: url(../images/icon-twitter.png) top center no-repeat;
+						filter: hue-rotate(180deg);
+					}
+					&.fb {
+						background: url(../images/icon-facebook.png) top center no-repeat;						
+					}
+					&.rss {
+						background: url(../images/icon-rss.png) top center no-repeat;						
+					}
+				}
+			}
+			.mainFooterInfo {
+				float: left;
+				font-size: .8em;
+				
+				.footerLinks {
+					.link, .link:visited {
+						color: #40aa96;
+						text-decoration: none;
+					}
+					.sep:before {
+						content: "|";
+						color: #a5a5a5;
+						margin: 0 3px;
+					}
+				}
+				.copy {
+					color: #a5a5a5;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 10px) {
+	body {
+		.formText, .formTextarea {
+			width: 95%;
+		}
+		.container {
+			margin-top: 20px;
+			width: 95%;
+			
+			.mainHeader {
+				position: relative;
+				text-align: center;
+				margin-bottom: 20px;
+				border-bottom: 2px solid #e7e7e7;
+				padding-bottom: 20px;
+				
+				.logo {
+					vertical-align: middle;
+					display: none;
+					margin-right: 20px;
+				}
+				.mainNav {
+					display: inline-block;
+					vertical-align: middle;
+				
+					.navItem {
+						display: inline-block;
+						margin-right: 10px;
+			
+						.navText, navText:visited {
+							font-size: 1em;
+						}
+						.navIcon {
+							display: none;
+						}
+					}
+				}
+				.socialBox {
+					display: none;
+				}
+			}
+			.logo {
+				margin: 0 auto 20px auto;
+				display: block;
+			}
+			.mainContent {
+				.splash {
+					width: 100%;
+					zoom: .8;
+					
+					.splashText {
+						margin-top: 355px;
+						width: 100%;
+					
+						h1 {
+							float: none;
+							background-color: rgba(255, 255, 255, .8);
+						}
+						.photographer {
+							margin: 3px 5px 0 0;
+							padding: 3px 0;
+							background-color: rgba(255, 255, 255, 1);
+							
+							&:before {
+								content: "*";
+							}
+						}
+					}
+				}
+				.splashMenu {
+					display: none;
+				}
+				.mail {
+					.instr {
+						width: 70%;
+						margin-bottom: 12px;
+					}
+					.signupTextbox {
+						width: 50%;
+					}
+				}
+				.recipes {
+					.recipe {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 679px) {
+	body {
+		.formText, .formTextarea {
+			width: 70%;
+		}
+		.container {
+			margin-top: 20px;
+			width: 670px;
+			
+			.mainHeader {
+				position: relative;
+				text-align: center;
+				margin-bottom: 20px;
+				border: 0;
+				padding: 0;
+				
+				.logo {
+					vertical-align: middle;
+					display: inline-block;
+					margin-right: 20px;
+				}
+				.mainNav {
+					display: inline-block;
+					vertical-align: middle;
+				
+					.navItem {
+						display: inline-block;
+						margin-right: 39px;
+						
+						.navText, navText:visited {
+							font-size: 1.1em;
+						}
+						.navIcon {
+							display: none;
+						}
+					}
+				}
+				.socialBox {
+					display: none;
+				}
+			}
+			.logo {
+				display: none;
+			}
+			.mainContent {
+				.splash {
+					width: 100%;
+					zoom: .8;
+					
+					.splashText {
+						margin-top: 355px;
+						width: 100%;
+					
+						h1 {
+							float: none;
+							background-color: rgba(255, 255, 255, .8);
+						}
+						.photographer {
+							margin: 3px 5px 0 0;
+							padding: 3px 0;
+							background-color: rgba(255, 255, 255, 1);
+							
+							&:before {
+								content: "*";
+							}
+						}
+					}
+				}
+				.splashMenu {
+					display: none;
+				}
+				.mail {
+					.instr {
+						width: 90%;
+						margin-bottom: 12px;
+					}
+					.signupTextbox {
+						width: 430px;
+					}
+				}
+				.recipes {
+					.recipe {
+						width: 47%;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 893px) {
+	body {
+		.formText, .formTextarea {
+			width: 50%;
+		}
+		.container {
+			margin-top: 20px;
+			width: 880px;
+			
+			.mainHeader {
+				position: relative;
+				margin-bottom: 20px;
+				text-align: left;
+				border: 0;
+				padding: 0;
+				
+				.logo {
+					vertical-align: middle;
+					display: inline-block;
+					margin-right: 125px;
+				}
+				.mainNav {
+					display: inline-block;
+					vertical-align: middle;
+				
+					.navItem {
+						display: inline-block;
+						margin-right: 39px;
+
+						.navText, navText:visited {
+							font-size: 1.1em;
+						}
+						.navIcon {
+							margin: 0 auto 3px auto;
+							display: block;
+						}
+					}
+				}
+				.socialBox {
+					display: none;
+				}
+			}
+			.logo {
+				display: none;
+			}
+			.mainContent {
+				.splash {
+					width: 100%;
+					zoom: 1;
+					
+					.splashText {
+						margin-top: 288px;
+						width: auto;
+						
+						h1 {
+							float: right;
+							background-color: rgba(255, 255, 255, 1);
+						}
+						.photographer {
+							margin: 40px 10px 0 0;
+							padding: 3px 10px;	
+							background-color: rgba(255,255,255,.5);
+							
+							&:before {
+								content: "";
+							}
+						}
+					}
+				}
+				.splashMenu {
+					width: 100%;
+					display: block;
+					
+					.splashNavItem {
+						height: 55px;
+						text-align: center;
+						
+						.splashNavDescription {
+							display: none;
+						}
+					}
+				}
+				.mail {
+					.instr {
+						width: 48%;
+						margin-bottom: 0;
+					}
+					.signupTextbox {
+						width: 30%;
+					}
+				}
+				.recipes {					
+					.recipe {
+						width: 22%;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1080px) {
+	body {
+		.formText, .formTextarea {
+			width: 50%;
+		}
+		.container {
+			margin-top: 50px;
+			width: 1078px;
+			
+			.mainHeader {
+				position: absolute;
+				text-align: left;
+				border: 0;
+				padding: 0;
+				
+				.logo {
+					margin-bottom: 39px;
+					margin-right: 0;
+				}
+				.mainNav {
+					display: block;
+					
+					.navItem {
+						margin-bottom: 20px;
+						display: block;
+						
+						.navText, navText:visited {
+							font-size: 1.1em;
+						}
+						.navIcon {
+							display: inline-block;
+							margin-right: 10px;
+						}
+					}
+					.socialBox {
+						width: 132px;
+						display: block;
+						
+						&.tweet {
+							margin-top: 60px;
+						}
+						&.fb {
+							margin-top: 30px;
+						}
+						h3 {
+							border-bottom: 1px dashed #e6e4e7;
+							font-size: 1.03em;
+							text-transform: uppercase;
+							margin: 10px 0;
+							padding-bottom: 6px;
+						}
+						.desc {
+							font-style: italic;
+							font-size: .8em;
+							margin-bottom: 10px;
+						}
+						.join {
+							font-size: .7em;
+							color: #40aa96;
+							font-style: italic;
+							font-weight: bold;
+							border: 1px solid #e6e4e7;
+							border-radius: 3px;
+							padding: 3px 5px;
+							
+							.icon {
+								width: 30px;
+								height: 30px;
+								display: inline-block;
+								zoom: .6;
+								margin-right: 6px;
+								vertical-align: middle;
+								
+								&.tweet {
+									background: url(../images/icon-twitter.png) top center no-repeat;
+									filter: hue-rotate(180deg);
+								}
+								&.fb {
+									background: url(../images/icon-facebook.png) top center no-repeat;						
+								}
+							}
+						}
+					}
+				}
+			}
+			.logo {
+				display: none;
+			}
+			.mainContent {
+				margin-left: 182px;
+				
+				&.admin {
+					height: 800px;
+				}
+				
+				.splash {
+					width: 100%;
+					zoom: 1;
+					
+					.splashText {
+						margin-top: 288px;
+						width: auto;
+					
+						h1 {
+							float: right;
+							background-color: rgba(255, 255, 255, 1);
+						}
+						.photographer {
+							margin: 40px 10px 0 0;
+							padding: 3px 10px;
+							background-color: rgba(255,255,255,.5);
+							
+							&:before {
+								content: "";
+							}
+						}
+					}
+				}
+				.splashMenu {
+					width: 100%;
+					display: block;
+					
+					.splashNavItem {
+						height: 85px;
+						text-align: left;
+						
+						.splashNavDescription {
+							display: block;
+						}
+					}
+
+				}
+				.mail {
+					.instr {
+						width: 48%;
+						margin-bottom: 0;
+					}
+					.signupTextbox {
+						width: 30%;
+					}
+				}
+				.recipes {					
+					.recipe {
+						width: 22%;
+					}
+				}		
+			}
+		}
+	}
+}	

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="foodSenseApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Food Sense</title>
+		<script>less = { env: 'development'};</script>
+		<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet/less" type="text/css" href="css/foodSense.less">
+		<script src="lib/less.min.js"></script>
+
+	</head>
+	<body ng-init="main = {}">
+		<section class="container">
+			<header class="mainHeader">
+				<div class="logo" ui-sref="admin"></div>
+				<nav class="mainNav">
+					<div class="navItem">
+						<div class="navIcon" id="tastemakers"></div>
+						<a href="#" class="navText">Tastemakers</a>
+					</div>
+					<div class="navItem">
+						<div class="navIcon" id="blog"></div>
+						<a href="#" class="navText">Blog</a>
+					</div>			
+					<div class="navItem">
+						<div class="navIcon" id="thealist"></div>
+						<a href="#" class="navText">The A-List</a>
+					</div>
+					<div class="navItem">
+						<div class="navIcon" id="contribute"></div>
+						<a href="#" class="navText">Contribute</a>
+					</div>
+					<div class="navItem">
+						<div class="navIcon" id="about"></div>
+						<a href="#" class="navText">About</a>
+					</div>
+					<div class="socialBox tweet">
+						<h3>Latest Tweet</h3>
+						<div class="join"><span class="icon tweet"></span>Join the Conservation</div>
+					</div>
+					<div class="socialBox fb">
+						<h3>Let's Be Friends!</h3>
+						<div class="desc">For weekly finds, community recommendations, and more, like us on Facebook.</div>
+						<div class="join"><span class="icon fb"></span>Join the Community</div>
+					</div>
+				</nav>
+			</header>
+			<div class="logo" ui-sref="admin"></div>
+			<section class="mainContent" ui-view ng-class="{ admin: main.state === 'admin' }"></section>
+			<footer class="mainFooter">
+				<section class="social">
+					<a href="#" class="icon tweet"></a><a href="#" class="icon fb"></a><a href="#" class="icon rss"></a>
+				</section>
+				<section class="mainFooterInfo">
+					<section class="footerLinks"><a href="#" class="link">Privacy Policy</a><span class="sep"></span>
+					<a href="#" class="link">Terms of Use</a><span class="sep"></span><a href="#" class="link">Contact</a></section>
+					<section class="copy">2015 Food Sense, all rights reserved.</section>
+				</section>
+			</footer>
+		</section>
+		<script src="lib/angular.1.5.6.min.js"></script>
+		<script src="lib/angular-ui-router.js"></script>
+		
+		<script src="bin/home/homeApp.js"></script>
+		<script src="bin/home/homeSrv.js"></script>
+		<script src="bin/home/homeCtrl.js"></script>
+		
+		<script src="bin/admin/adminApp.js"></script>
+		<script src="bin/admin/adminSrv.js"></script>
+		<script src="bin/admin/adminCtrl.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

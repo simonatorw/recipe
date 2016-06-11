@@ -1,0 +1,39 @@
+				<div class="splash">
+					<div class="splashText">
+						<h1>What's Cooking?</h1>
+						<h2>Browse our gallery for dependably delicious recipes.</h2>
+						<div class="photographer">photo by Clare Barbosa</div>
+					</div>
+				</div>
+				<nav class="splashMenu">
+					<div class="splashNavItem" ng-class="{ selected: home.selected === 0 }" ng-click="home.selected = 0">
+						<span class="splashNavTitle">Tastemakers</span>
+						<section class="splashNavDescription">Feast your eyes &amp; get your recipes!</section>
+					</div>
+					<div class="splashNavItem" ng-class="{ selected: home.selected === 1 }" ng-click="home.selected = 1">
+						<span class="splashNavTitle">Blog</span>
+						<section class="splashNavDescription">News, how-tos, stories, and more</section>
+					</div>
+					<div class="splashNavItem" ng-class="{ selected: home.selected === 2 }" ng-click="home.selected = 2">
+						<span class="splashNavTitle">The A-List</span>
+						<section class="splashNavDescription">Handpicked, absolute favorites</section>
+					</div>
+					<div class="splashNavItem" ng-class="{ selected: home.selected === 3 }" ng-click="home.selected = 3">
+						<span class="splashNavTitle">Contribute</span>
+						<section class="splashNavDescription">We want to hear from you!</section>
+					</div>
+				</nav>
+				<section class="mail">
+					<span class="instr">Sign up for our newsletter to receive a handpicked selection of the best stories, recipes, and news, delivered weekly to your inbox.</span>
+					<input type="text" class="signupTextbox" placeholder="Email"><button class="emailSubscribe">Subscribe</button>
+				</section>
+				<section class="recipes">
+					<section class="recipe" ng-repeat="recipe in home.recipes">
+						<img ng-src="images/{{recipe.image}}" class="recipeImg">
+						<h3>{{recipe.title}}</h3>
+						<section class="recipeDescription">{{recipe.summary}}</section>
+						<footer class="recipeFooter">
+							<time class="date">{{recipe.date}} /</time> <a href="#" class="more">Read &raquo;</a>
+						</footer>
+					</section>
+				</section>

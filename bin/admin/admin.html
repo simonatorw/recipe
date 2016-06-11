@@ -1,0 +1,22 @@
+<a ui-sref="home" class="link">&lt; back</a>
+<h1>Add Recipe</h1>
+<form name="recipeForm">
+	<section class="formContainer">
+		<img ng-src="images/{{admin.recipeImg}}">
+	</section>
+	<section class="formContainer">
+		<select name="recipeImg" ng-model="admin.recipeImg" class="formSelect" required ng-options="img for img in admin.imgs">
+			<option value="">Select Image</option>
+		</select>
+	</section>
+	<section class="formContainer">
+		<input type="text" name="recipeTitle" ng-model="admin.recipeTitle" class="formText" placeholder="Enter a recipe title" required>
+	</section>
+	<section class="formContainer">
+		<textarea name="recipeDescription" ng-model="admin.recipeDescription" class="formTextarea" placeholder="Enter a description" required>
+		</textarea>
+	</section>
+	<section class="formContainer">
+		<button ng-click="addRecipe(recipeForm.$valid, admin)">Add</button>
+	</section>
+</form>
